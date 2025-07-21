@@ -10,23 +10,27 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+steps:
+  - name: Checkout code
+    uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
+  - name: Setup Node.js
+    uses: actions/setup-node@v3
+    with:
+      node-version: 18
 
-      - name: Install dependencies
-        run: npm install
+  - name: Install dependencies
+    run: npm install
+    working-directory: test-react-lib
 
-      - name: Run lint check
-        run: npm run lint
+  - name: Run lint check
+    run: npm run lint
+    working-directory: test-react-lib
 
-      - name: Run tests
-        run: npm test
+  - name: Run tests
+    run: npm test
+    working-directory: test-react-lib
 
-      - name: Build Storybook
-        run: npm run build-storybook
+  - name: Build Storybook
+    run: npm run build-storybook
+    working-directory: test-react-lib
