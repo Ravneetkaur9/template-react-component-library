@@ -10,5 +10,4 @@ const Button = (props: ButtonProps) => {
 
 export default Button;
 
-// This is a test comment for pre-commit hook
 // this is a test.
