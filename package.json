@@ -10,7 +10,10 @@
     "lint": "eslint --config eslint.config.js \"src/**/*.{ts,tsx}\"",
     "prettier:check": "prettier --check \"src/**/*.{ts,tsx,js,json,md}\"",
     "prettier:write": "prettier --write \"src/**/*.{ts,tsx,js,json,md}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "author": "Alex Eagleson",
   "license": "ISC",
@@ -27,6 +30,7 @@
     "@types/react": "^17.0.34",
     "@typescript-eslint/eslint-plugin": "^8.37.0",
     "@typescript-eslint/parser": "^8.37.0",
+    "@vitejs/plugin-react": "^4.7.0",
     "@vitest/browser": "^3.2.4",
     "@vitest/coverage-v8": "^3.2.4",
     "eslint": "^9.31.0",
@@ -55,7 +59,7 @@
   "dependencies": {
     "react-dom": "^17.0.2"
   },
-   "lint-staged": {
+  "lint-staged": {
     "*.{ts,tsx}": [
       "prettier --write",
       "eslint --fix"
